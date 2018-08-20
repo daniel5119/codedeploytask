@@ -3,7 +3,7 @@
 declare PT_environment
 environment=$PT_environment
 
-if ([ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ]) && [-e /etc/puppetlabs/puppetserver/conf.d/code-manager.conf] 
+if ([ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ]) && [-f /etc/puppetlabs/puppetserver/conf.d/code-manager.conf] 
 then
   if [ -f "/root/.puppetlabs/token" ]
   then  
