@@ -16,7 +16,7 @@ then
       /opt/puppetlabs/bin/puppet-code deploy --all --wait -l debug 2>&1
     fi
   else
-    echo "Please follow the documentation here: <> to create a new token"
+    echo "Please follow the documentation here: https://puppet.com/docs/pe/latest/rbac_token_auth_intro.html#generate-a-token-using-puppet-access to create a new token"
     exit 1 
   fi
 else
