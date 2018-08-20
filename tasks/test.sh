@@ -3,7 +3,7 @@
 declare PT_environment
 environment=$PT_environment
 
-if ([ -e "/etc/sysconfig/pe-puppetserver" ] || [ -e "/etc/default/pe-puppetserver" ]) && [ -f "/etc/puppetlabs/puppetserver/conf.d/code-manager.conf" ] 
+if [ -f "/etc/puppetlabs/puppetserver/conf.d/code-manager.conf" ] 
 then
   if [ -f "/root/.puppetlabs/token" ]
   then  
@@ -20,7 +20,6 @@ then
     exit 1 
   fi
 else
-  echo "Node is not a MoM, please select node which runs the pe-puppetserver Service."
+  echo "Node is not a MoM, please select MoM node."
   exit 1  
 fi    
-
